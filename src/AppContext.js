@@ -3,7 +3,8 @@ import React from 'react'
 const AppContext = React.createContext({
 
 searchWeather: () => {},
-weatherList: []
+weatherList: [],
+removeWeather: () => {}
 
 })
 

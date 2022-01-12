@@ -6,18 +6,16 @@ function Results() {
     return (
         <AppContext.Consumer>
             {(value) => {
-                if (value.weatherList.length == 0) {
-                    return <div className='no_zipcode_text'>
-                        No zipcode    
-                    </div>
+                if (value.weatherList.length === 0) {
+                    return null
                 }
                 return (
                     <article className='results_article'>
-                        <ul className='results_list grid_list'>
+                        <ul className='results_list'>
                             {value.weatherList.map((weather, i) => {
                                 return (
-                                    <li key={i} className='grid_item'>
-                                        <WeatherCard weather={weather} key={i} />
+                                    <li key={i} >
+                                        <WeatherCard weather={weather} key={i} ind={i} />
                                     </li>
                                 )
                             })}

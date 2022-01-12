@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import AppContext from './AppContext'
 import HomePage from './HomePage/HomePage'
+import './App.css'
 
 export default class App extends Component {
   constructor(props) {
@@ -10,7 +11,8 @@ export default class App extends Component {
     this.state = {
       // state goes here
       searchWeather: this.searchWeather,
-      weatherList: []
+      weatherList: [],
+      removeWeather: this.removeWeather
     }
   }
 
@@ -38,10 +40,19 @@ export default class App extends Component {
       );
   }
 
+  removeWeather = (e, indexKey) => {
+    e.preventDefault()
+    const newResults = this.state.weatherList.slice(0, indexKey).concat(this.state.weatherList.slice(indexKey + 1, this.state.weatherList.length))
+    this.setState({
+      weatherList: newResults
+    })
+  }
+
   render() {
     const contextValue = {
       searchWeather: this.state.searchWeather,
-      weatherList: this.state.weatherList
+      weatherList: this.state.weatherList,
+      removeWeather: this.state.removeWeather
     }
     return (
       <AppContext.Provider value={contextValue}>
