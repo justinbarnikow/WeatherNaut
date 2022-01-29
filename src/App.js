@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 import AppContext from './AppContext'
 import HomePage from './HomePage/HomePage'
 import './App.css'
+import config from './config.js'
 
 export default class App extends Component {
   constructor(props) {
@@ -21,7 +22,7 @@ export default class App extends Component {
   searchWeather = (e) => {
     e.preventDefault();
     const zipcode = e.target.zipcode.value;
-    const APIkey = 'd83d52d789aa4d40e2428795c27b729b'
+    const APIkey = config.API_KEY
     const url = `https://api.openweathermap.org/data/2.5/weather?zip=${zipcode}&appid=${APIkey}&units=imperial`
     fetch(url)
       .then(async (data) => {

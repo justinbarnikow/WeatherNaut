@@ -22,7 +22,7 @@ html {
 }
 
 .App {
-  font-size: 16px;
+  font-family: 'Nunito', sans-serif;
   width: 100%;
   min-height: 100vh;
   display: flex;
@@ -39,6 +39,7 @@ html {
 ul {
   list-style-type: none;
 }
+
 /* ^^^^^^^^^^ APP SIZING & LAYOUT DESIGN ^^^^^^^^^^ */
 
 /* vvvvvvvvvv TITLE: WEATHERNAUT vvvvvvvvvv */
@@ -122,10 +123,10 @@ ul {
 }
 
 .temp_min {
-  padding-right: 25px;
+  padding-right: 40px;
 }
 .temp_max {
-  padding-left: 25px;
+  padding-left: 40px;
 }
 
 .weather_description {
@@ -161,7 +162,15 @@ ul {
   }
 
   .title_article {
-    padding-top: 200px;
+    padding-top: 100px;
+  }
+
+  .temperature {
+    font-size: 72px;
+  }
+
+  .min_max_group {
+    font-size: 42px;
   }
 
   .weather_card {
@@ -178,5 +187,13 @@ ul {
 
   .weather_card {
     width: 425px;
+  }
+
+  .temperature {
+    font-size: 84px;
+  }
+
+  .min_max_group {
+    font-size: 48px;
   }
 }
