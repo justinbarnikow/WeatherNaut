@@ -2,7 +2,7 @@
 https://weathernaut-jb.vercel.app/
 
 ## Description
-Weathernaut is a react-app that fetches weather data. Weathernaut is a simple weather app that accepts any valid US zipcode from the Openweathermap API and display the basic information, such as current temperature, min and max temperatures and the weather status (ie rainy, cloudy, clear sky). You can display as many cities as you'd like, as opposed to one single city at a time.
+Weathernaut is a react-app that fetches weather data. Weathernaut is a simple weather app that accepts any valid US zipcode from the Openweathermap API and displays the basic information, such as current temperature, min and max temperatures and the weather status (ie rainy, cloudy, clear sky). You can display as many cities as you'd like, as opposed to one single city at a time.
 
 ## Built With
 * Javascript
@@ -12,7 +12,7 @@ Weathernaut is a react-app that fetches weather data. Weathernaut is a simple we
 * Git/GitHub
 
 ## Features
-* search the current weather for an valid US zip code
+* search the current weather for any valid US zip code
 * display one or more cities at a time
 * display the current temperature, min / max temperatures and weather status (ie thunderstorms, clear sky, snow)
 
